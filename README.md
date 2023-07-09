@@ -1,4 +1,4 @@
-# Taming-Offensive-IronPython
+# Snakes on a Screen: Taming Offensive IronPython Techniques
 IronPython is a powerful and flexible programming language that has been increasingly used by attackers due to its ability to bypass security controls. This practical workshop will explore the inner workings of IronPython and its unique features that enable sophisticated offensive techniques. Participants will gain hands-on experience in developing IronPython payloads that can evade modern security controls and execute malicious code on target systems.
 
 The workshop will cover the following topics:
