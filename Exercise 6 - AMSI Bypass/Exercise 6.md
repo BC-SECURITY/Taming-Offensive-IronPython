@@ -15,7 +15,7 @@ This script contains malicious content and has been blocked by your antivirus so
     + FullyQualifiedErrorId : ScriptContainedMaliciousContent
 ```
 
-3. Now let's write the bypass by first creating another python file called powershell_amsi_bypass.py similar to Exercise 5
+3. Now let's write the bypass by first creating another Python file called powershell_amsi_bypass.py, similar to Exercise 5
 4. Start by importing the required modules. `clr`` allows IronPython to interface with .NET and System provides access to core .NET functionalities. os is a Python library for interacting with the Operating System.
 
 ```python
