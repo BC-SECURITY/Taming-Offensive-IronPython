@@ -1,7 +1,7 @@
 # Exercise 5: Accessing PowerShell Runspace with IronPython
 In this exercise, we'll use IronPython to create a PowerShell runspace and execute a simple PowerShell command. This exercise is intended to illustrate how IronPython can integrate with PowerShell, expanding its capabilities.
 
-1. Create a python file called `powershell.py` in the same folder as your IronPython console. (ex: C:\Program Files\IronPython 3.4)
+1. Create a Python file called `powershell.py` in the same folder as your IronPython console. (ex: C:\Program Files\IronPython 3.4)
 2. Start by importing the necessary .NET libraries that allow IronPython to interact with PowerShell.
 
 ```python
@@ -21,7 +21,7 @@ ps = PowerShell.Create()
 ps.AddScript("Get-Process")
 ```
 
-4. After adding the command, you can now invoke it and get the output. The results will be printed to the console.
+4. After adding the command, you can now invoke it and get the output. The results will be printed on the console.
 
 ```python
 output = ps.Invoke()
@@ -41,7 +41,7 @@ output = ps.Invoke()
 print(output)
 ```
 
-6. Do this by opening a terminal from the folder. You should see a list of running processes on your machine. If you see the below result then you have successfully accessed PowerShell runspace using IronPython, which could allow for executing complex PowerShell scripts and commands directly from your IronPython code.
+6. Do this by opening a terminal from the folder. You should see a list of running processes on your machine. If you see the below result, then you have successfully accessed PowerShell runspace using IronPython, which could allow for executing complex PowerShell scripts and commands directly from your IronPython code.
 
 ```
 .\ipy.exe powershell.py
