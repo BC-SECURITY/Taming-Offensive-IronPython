@@ -5,7 +5,7 @@
 2. Choose the latest stable release and download the .msi file (IronPython-3.x.x.msi).
 3. Double-click on the downloaded .msi file to start the installation process.
 4. Follow the on-screen instructions. Accept the terms and conditions and select the installation path.
-5. Type ipy and press Enter.
+5. Type `ipy` and press Enter.
 6. If IronPython is installed correctly, it will display the IronPython version and an interactive prompt.
 
 ## Visual Studio
