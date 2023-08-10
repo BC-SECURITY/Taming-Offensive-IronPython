@@ -4,7 +4,7 @@
 1. If not using the provided range, download [Rubeus](https://github.com/GhostPack/Rubeus.git)
 2. Locate the Visual Studio shortcut on your desktop or find it from the Start menu and open it.
 3. Open the Rubeus Solution: `Click on File > Open > Project/Solution`
-4. Locate the Main Method in Rubeus/Program.cs which is name `public static void Main(string[] args)`.
+4. Locate the Main Method in Rubeus/Program.cs, which is named `public static void Main(string[] args)`.
 5. Change the private keyword to public to make the method publicly accessible:
 csharp
 ```
@@ -30,7 +30,7 @@ def file_to_base64(file_path, output_file_path):
 file_to_base64('Rubeus.exe', 'output_base64.txt')
 ```
 
-3. Execute the function with the path to your .NET assembly:.
+3. Execute the function with the path to your .NET assembly.
 
 ```powershell
 .\ipy.exe .\file_to_base64.py
@@ -69,7 +69,7 @@ def base64_to_bytes(base64_string):
     return System.Array[System.Byte](base64.b64decode(base64_string))
 ```
 
-5. Add function to convert a Python list to a .NET string array.
+5. Add a function to convert a Python list to a .NET string array.
 
 ```python
 
