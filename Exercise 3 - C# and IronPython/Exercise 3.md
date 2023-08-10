@@ -29,7 +29,6 @@ namespace YourNamespace
         {
             ScriptEngine engine = Python.CreateEngine();
             string code = @"
-import clr
 import System
 
 def print_dotnet_version():
