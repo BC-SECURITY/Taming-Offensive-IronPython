@@ -1,4 +1,4 @@
-# Exercise 7: AMSI Bypass with IronPython
+# Exercise 6: AMSI Bypass with IronPython
 This exercise aims to build a script using IronPython to bypass the Anti-Malware Scan Interface (AMSI). AMSI is an open interface available on Windows 10 for applications to request, at runtime, a synchronous scan of a memory buffer by an installed antivirus or security solution. The script patches a specific method of the AMSI's DLL loaded in memory, therefore allowing malicious code to execute without detection.
 
 The script utilizes functionalities provided by the ctypes library in IronPython, which provides C compatible data types and allows to call functions in DLLs/shared libraries.
