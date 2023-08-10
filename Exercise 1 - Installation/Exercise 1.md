@@ -1,4 +1,5 @@
 # Exercise 1: Installing Visual Studio and IronPython3
+If you aren't using the provided range, then follow the below steps.
 
 ## Install IronPython
 1. Visit IronPython's official GitHub page at https://github.com/IronLanguages/ironpython3/releases.
