@@ -5,7 +5,6 @@ In this exercise, you'll create and run a simple IronPython script to help you b
 2. Copy the following code into the terminal
 
 ```python
-import clr
 import System
 
 def print_dotnet_version():
