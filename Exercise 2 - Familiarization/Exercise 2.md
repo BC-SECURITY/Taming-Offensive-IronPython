@@ -1,4 +1,4 @@
-# Exercise 1: Familiarization with IronPython
+# Exercise 2: Familiarization with IronPython
 In this exercise, you'll create and run a simple IronPython script to help you become familiar with IronPython.
 
 1. Open the IronPython Console (IPY) by searching for it in the search bar
