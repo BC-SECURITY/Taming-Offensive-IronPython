@@ -124,4 +124,5 @@ if __name__ == "__main__":
 
 9. Type: ` .\ipy.exe .\IronRubeus.py help` and you should receive the following output.
 
-![image](https://github.com/BC-SECURITY/Taming-Offensive-IronPython/assets/20302208/0d408f52-216f-43e9-b538-77ce56bc3580)
+![image](https://github.com/BC-SECURITY/Taming-Offensive-IronPython/assets/20302208/b071bfd2-adf9-4be9-afd5-38b3a6d500ba)
+
