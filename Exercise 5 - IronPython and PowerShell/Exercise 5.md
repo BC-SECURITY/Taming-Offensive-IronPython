@@ -31,6 +31,8 @@ print(output)
 5. Finally, execute the entire IronPython script using your IronPython environment, ipy.exe. 
 
 ```python
+import clr;
+
 clr.AddReference('System.Management.Automation')
 from System.Management.Automation import PowerShell
 
@@ -41,9 +43,26 @@ output = ps.Invoke()
 print(output)
 ```
 
-6. Do this by opening a terminal from the folder. You should see a list of running processes on your machine. If you see the below result, then you have successfully accessed PowerShell runspace using IronPython, which could allow for executing complex PowerShell scripts and commands directly from your IronPython code.
+6. Do this by opening a PowerShell window in the folder. You should see a list of running processes on your machine. If you see the below result, then you have successfully accessed PowerShell runspace using IronPython, however, the information is not in a format that we can read.
 
-```
+```powershell
 .\ipy.exe powershell.py
 <System.Collections.ObjectModel.Collection`1[[System.Management.Automation.PSObject, System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]] object at 0x000000000000002B [System.Collections.ObjectModel.Collection`1[System.Management.Automation.PSObject]]>
+```
+
+7. To then read the PSObject, we will need to iterate over the object and print it to our console.
+
+```python
+import clr;
+
+clr.AddReference('System.Management.Automation')
+from System.Management.Automation import PowerShell
+
+ps = PowerShell.Create()
+ps.AddScript("Get-Process")
+
+output = ps.Invoke()
+
+for line in output:
+    print(line)
 ```
