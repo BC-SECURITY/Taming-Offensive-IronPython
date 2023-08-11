@@ -13,7 +13,7 @@ public static void Main(string[] args)
 6. Navigate to the top menu and click `Build > Build Solution`.
 7. Copy Rubeus.exe to `C:\Program Files\IronPython 3.4`
 
-## Coverting to Base64
+## Converting to Base64
 1. From `C:\Program Files\IronPython 3.4`, open a notepad named `file_to_base64.py`.
 2. Write a Python function to convert a file into its base64 representation.
 
@@ -120,3 +120,8 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+8. Disable real-time protection to run the script.
+
+9. Type: ` .\ipy.exe .\IronRubeus.py help` and you should receive the following output.
+
+![image](https://github.com/BC-SECURITY/Taming-Offensive-IronPython/assets/20302208/0d408f52-216f-43e9-b538-77ce56bc3580)
